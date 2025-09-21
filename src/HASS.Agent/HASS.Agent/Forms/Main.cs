@@ -943,7 +943,7 @@ namespace HASS.Agent.Forms
             }
 
             // if it's a leftclick, show the regular menu if enabled
-            if (e.Button == MouseButtons.Left && Variables.AppSettings.TrayIconWebViewShowMenuOnLeftClick)
+            if (e.Button == MouseButtons.Right && Variables.AppSettings.TrayIconWebViewShowMenuOnLeftClick)
             {
                 CmTrayIcon.Show(MousePosition);
 
@@ -951,7 +951,7 @@ namespace HASS.Agent.Forms
             }
 
             // if it's anything but rightclick, do nothing
-            if (e.Button != MouseButtons.Right)
+            if (e.Button != MouseButtons.Left)
                 return;
 
             // close the menu if it loaded
